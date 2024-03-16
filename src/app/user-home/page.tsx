@@ -17,7 +17,7 @@ export default function UserHome() {
   return (
     <main>
       <Header user={{ name: user.username, email: user.email }} />
-      <UserFeed />
+      <UserFeed user={user} />
     </main>
   );
 }
