@@ -1,11 +1,10 @@
-import Link from "../../../../node_modules/next/link";
-import { registerModals } from "../../../Constants/Constants";
+import { registerModals } from "../../../constants/Constants";
 
 export default function Signup({ toggleModal }) {
   return (
     <section className="flex flex-col items-center bg-amber-300 p-3">
       <h1 className="text-lg font-bold mb-4">SIGN UP</h1>
-      <form className="flex flex-col items-center gap-2">
+      <section className="flex flex-col items-center gap-2">
         <input
           type="text"
           placeholder="username"
@@ -32,9 +31,7 @@ export default function Signup({ toggleModal }) {
           placeholder="confirm password"
           className="login-input w-100"
         />
-        <button type="submit" className="login-button mb-2">
-          Signup
-        </button>
+        <button className="login-button mb-2">Signup</button>
         <p
           onClick={() => {
             toggleModal(registerModals.login);
@@ -43,7 +40,7 @@ export default function Signup({ toggleModal }) {
         >
           already have an account
         </p>
-      </form>{" "}
+      </section>
     </section>
   );
 }
