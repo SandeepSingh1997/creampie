@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .login-input {
+    @apply h-10 rounded-md p-3 outline-none text-sm tracking-wide
+  }
+  .login-input:focus{
+    @apply border-amber-500 border
+  }
+  .login-button{
+    @apply h-10 rounded-md bg-white pl-5 pr-5 text-sm font-bold transition-colors
+  }
+  .login-button:hover{
+    @apply h-10 bg-sky-800 text-white
+  }
+}
