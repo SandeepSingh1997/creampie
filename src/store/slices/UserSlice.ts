@@ -1,9 +1,5 @@
+import { UserState } from "@/types/types";
 import { createSlice } from "@reduxjs/toolkit";
-
-type UserPayload ={
-username: String,
-email: String
-};
 
 const initialUserState =  {
     username: null,
@@ -16,7 +12,7 @@ const userSlice = createSlice({
     initialState:initialUserState,
     reducers: {
         login: (state, payload)=>{
-            const userPayload : UserPayload= payload.payload;
+            const userPayload : UserState= payload.payload;
             state.username = payload.payload.username;
             state.email = payload.payload.email;
             state.isLoggedIn = true;
